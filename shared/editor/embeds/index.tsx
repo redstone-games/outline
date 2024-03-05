@@ -206,6 +206,13 @@ const embeds: EmbedDescriptor[] = [
     icon: <Img src="/images/codepen.png" alt="Codepen" />,
   }),
   new EmbedDescriptor({
+    title: "Red Stone Card",
+    keywords: "card",
+    regexMatch: [new RegExp("^https://cards.redstone.rs/.*$")],
+    transformMatch: (matches) => `https://cards.redstone.rs/${matches[0]}`,
+    icon: <Img src="/images/redstone.png" alt="Codepen" />,
+  }),
+  new EmbedDescriptor({
     title: "DBDiagram",
     keywords: "diagrams database",
     regexMatch: [new RegExp("^https://dbdiagram.io/(embed|d)/(\\w+)$")],
